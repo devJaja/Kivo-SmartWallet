@@ -116,7 +116,7 @@ export function useArbitrageAgent() {
   const [scanProgress, setScanProgress] = useState<ScanProgress | null>(null);
   const [activityLogs, setActivityLogs] = useState<ActivityLog[]>([]);
   const [executingId, setExecutingId] = useState<string | null>(null);
-  const [useDummyData, setUseDummyData] = useState(true); // Default to true for now
+  const [useDummyData, setUseDummyData] = useState(false); // Disabled - use real data only
 
   const toggleDummyData = () => setUseDummyData(!useDummyData);
 

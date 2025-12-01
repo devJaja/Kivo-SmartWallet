@@ -19,6 +19,7 @@ import { useAccount, useBalance } from "wagmi";
 import { useWalletStore } from "@/store/wallet-store";
 import { useTransactionHistory } from "@/hooks/useTransactionHistory";
 import ArbitrageScanner from "@/components/arbitrage-scanner";
+import FastArbitrageScanner from "@/components/fast-arbitrage-scanner";
 import { LogOut } from "lucide-react";
 import { wagmiConfig } from "@/hooks/wagmiConfig";
 import { RealTimePriceOracle } from "@/lib/priceOracle";
@@ -271,13 +272,13 @@ export default function Dashboard() {
             <TransactionList />
           </motion.div>
 
-          {/* Arbitrage Scanner */}
+          {/* Fast Arbitrage Scanner */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.4 }}
           >
-            <ArbitrageScanner />
+            <FastArbitrageScanner />
           </motion.div>
 
           {/* Feature Cards */}

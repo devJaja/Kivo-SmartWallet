@@ -18,6 +18,7 @@ import {
   AgentSuggestion,
   ActivityLog,
 } from "@/hooks/use-arbitrage-agent";
+import { useFastArbitrageScanner } from "@/hooks/use-fast-arbitrage-scanner";
 
 export default function EnhancedAIAssistant() {
   const [isOpen, setIsOpen] = useState(false);
